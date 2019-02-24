@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add new menu item to restaurant {{restaurant_obj['name']}}</h1>
-    <form action="#" method="POST">
-        <input type="text" name="menuItemName">
+    <h1>Add new menu item to restaurant {{restaurant_obj.name}}</h1>
+    <form action="{{url_for('newMenuItem', id_restaurant=restaurant_obj.id)}}" method="POST">
+        <input type="text" name="menuItemName" placeholder="Name">
+        <input type="text" name="description" placeholder="Description">
+        <input type="text" name="price" placeholder="Price">
         <button type="submit">Add new menu item</button>
     </form>
 </body>

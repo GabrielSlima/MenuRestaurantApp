@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Do you wanna edit {{restaurant_obj['name']}}</h1>
-    <form action="#" method="POST">
-        <input type="text" name="restaurantName">
+    <h1>Do you wanna edit {{restaurant_obj.name}}</h1>
+    <form action="{{url_for('editRestaurant', id_restaurant=restaurant_obj.id)}}" method="POST">
+        <input type="text" name="restaurantName" placeholder="{{restaurant_obj.name}}">
         <button type="submit">Done</button> | <button>Cancel</button>
     </form>
 </body>

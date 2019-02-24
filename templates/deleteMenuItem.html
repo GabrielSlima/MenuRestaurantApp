@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Do you wanna delete this menu item {{menu_item['name']}} ?</h1>
-    <form action="#" method="POST">
-        <button type="submit">Yes</button> <button>No</button>
+    <h1>Do you wanna delete this menu item {{menu_item.name}} ?</h1>
+    <form action="{{url_for('deleteMenuItem', id_menu=menu_item.id, id_restaurant=menu_item.restaurant.id)}}" method="POST">
+        <button type="submit">Yes</button> <button href="{{url_for('showMenu', id_restaurant=menu_item.restaurant.id)}}">No</button>
     </form>
 </body>
 </html>

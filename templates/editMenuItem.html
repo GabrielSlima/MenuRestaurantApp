@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Do you wanna edit {{menu_item['name']}}</h1>
+    <h1>Do you wanna edit {{menu_item.name}}</h1>
     <form action="#" method="POST">
-        <input type="text" name="restaurantName">
+        <input type="text" name="menuItemName" placeholder="{{menu_item.name}}">
+        <input type="text" name="description" placeholder="{{menu_item.description}}">
+        <input type="text" name="price" placeholder="{{menu_item.price}}">
         <button type="submit">Done</button> | <button>Cancel</button>
     </form>
 </body>
