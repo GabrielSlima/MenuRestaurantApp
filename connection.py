@@ -1,2 +1,2 @@
 from sqlalchemy import create_engine
-banco = create_engine('sqlite:///restaurants.db')
+banco =  create_engine('sqlite:///restaurants.db')
